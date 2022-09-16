@@ -4,44 +4,19 @@ sidebar_position: 1
 
 # Getting Started
 
-This API uses the Oauth2.0 Client Credentials authorization flow to authenticate to the REST HTTP API. Please check out the [authentication](./guides/authentication) guide for authorization instructions, and view the [API Reference](./api-reference) for the specific data endpoints.
+Welcome to the documentation for the Restoration Dashboard!
 
-## Getting Started
+## API Environments
 
-Get started by **creating a new site**.
+There are two separate API environments: **staging** and **production**.
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+It is recommended to get started with the **staging** environment to ensure proper API connectivity before integrating with the **production** environment.
 
-### What you'll need
+REST API Base URL's:
+- **staging**: https://staging-api-xlxcoeos5q-uc.a.run.app
+- **production**: https://api.restorationdashboard.com
 
-- [Node.js](https://nodejs.org/en/download/) version 16.14 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+## Next Steps
 
-## Generate a new site
+This API uses the Oauth2.0 Client Credentials authorization flow to authenticate to the REST HTTP API. Start with the [authentication](./guides/authentication) guide to get connected, and check out the [API Reference](./api-reference) for specific data endpoints.
 
-Generate a new Docusaurus site using the **classic template**.
-
-The classic template will automatically be added to your project after you run the command:
-
-```bash
-npm init docusaurus@latest my-website classic
-```
-
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
-
-The command also installs all necessary dependencies you need to run Docusaurus.
-
-## Start your site
-
-Run the development server:
-
-```bash
-cd my-website
-npm run start
-```
-
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
-
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
-
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
