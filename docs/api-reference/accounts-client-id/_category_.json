@@ -1,0 +1,8 @@
+{
+    "label": "/accounts/{clientId}",
+    "position": 2,
+    "link": {
+        "type": "generated-index",
+        "description": "Documentation of the specific endpoints."
+    }
+}

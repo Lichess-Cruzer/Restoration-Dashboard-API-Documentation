@@ -1,0 +1,8 @@
+.http {
+    text-transform: uppercase;
+    font-size: 0.6em;
+    padding: 0.2em;
+    margin-right: 0.2em;
+    border: 1px solid;
+    border-radius: 8px;
+}

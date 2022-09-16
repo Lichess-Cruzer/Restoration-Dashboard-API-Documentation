@@ -59,17 +59,17 @@ const config = {
       navbar: {
         title: 'RRG Docs',
         logo: {
-          alt: 'My Site Logo',
+          alt: 'RRG Logo',
           src: 'img/logo.png',
         },
         items: [
           {
             type: 'doc',
-            docId: 'intro',
+            docId: 'getting-started',
             position: 'left',
-            label: 'Tutorial',
+            label: 'Documentation',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
+          // {to: '/blog', label: 'Blog', position: 'left'},
           {
             href: 'https://github.com/facebook/docusaurus',
             label: 'GitHub',

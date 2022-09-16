@@ -2,9 +2,9 @@
 sidebar_position: 1
 ---
 
-# Tutorial Intro
+# Getting Started
 
-Let's discover **Docusaurus in less than 5 minutes**.
+This API uses the Oauth2.0 Client Credentials authorization flow to authenticate to the REST HTTP API. Please check out the [authentication](./guides/authentication) guide for authorization instructions, and view the [API Reference](./api-reference) for the specific data endpoints.
 
 ## Getting Started
 
