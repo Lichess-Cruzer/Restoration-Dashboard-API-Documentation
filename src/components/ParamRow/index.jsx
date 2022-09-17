@@ -8,7 +8,7 @@ const ParamRow = ({
     request,
     response,
     parameter = '',
-    dataType = '',
+    dataType = 'string',
     required = false,
     description = '',
     ...props

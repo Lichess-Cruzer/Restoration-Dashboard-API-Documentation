@@ -28,7 +28,6 @@ required
 description="Your account's client secret."
 />
 <RequestParamRow
-collapsible
 parameter="grant_type"
 dataType="string"
 required
@@ -38,3 +37,18 @@ description='Set this parameter to "client_credentials".'
 
 ## Response
 
+<ResponseParamTable>
+<ResponseParamRow
+parameter="access_token"
+description='Access token to be used in the "Authorization: Bearer ACCESS_TOKEN" header for subsequent API calls.'
+/>
+<ResponseParamRow
+parameter="token_type"
+description='Returns as "Bearer".'
+/>
+<ResponseParamRow
+parameter="expires_in"
+data_type="number"
+description='The number of seconds until the access token expires.'
+/>
+</ResponseParamTable>
