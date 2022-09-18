@@ -1,5 +1,9 @@
 tr.param-row {
 
+    &.collapsible:hover {
+        cursor: pointer;
+    }
+
     .required {
         color: #3260a8;
     }
@@ -15,7 +19,6 @@ tr.param-row {
 
     td:first-child {
         padding-left: 1.5rem;
-        display: flex;
 
         .param-container {
             display: flex;

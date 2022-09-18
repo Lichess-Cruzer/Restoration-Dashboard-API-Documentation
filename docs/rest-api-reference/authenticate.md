@@ -6,7 +6,7 @@ sidebar_position: 1
 
 Endpoint to retrieve an access token. View the [authentication guide](/docs/guides/authentication.md) for more information on authenticating to the REST API.
 
-:::caution
+:::info
 You must use `application/x-www-form-urlencoded` content-type for this endpoint.
 :::
 

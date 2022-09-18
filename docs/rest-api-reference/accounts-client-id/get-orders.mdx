@@ -1,0 +1,88 @@
+import OrderParamRows from "@site/src/components/paramRowComponents/OrderParamRows"
+
+# GET ./orders
+
+Endpoint to retrieve a list of orders (pagination enabled).
+
+## Request
+
+<BaseUrlPath>orders</BaseUrlPath>
+
+URL Parameters:
+
+<RequestParamTable>
+
+<RequestParamRow
+parameter="by"
+description='A string representing the index field to query by. Valid values are "orderId", "groupId", "customerId", "invoiceId", or "sku".'
+/>
+
+<RequestParamRow
+parameter="where"
+description='If the "by" parameter is specified, this designates the search to only include items where the "by" field is equal to this string value.'
+/>
+
+<RequestParamRow
+parameter="from"
+description='An inclusive datestring to query the orders by (all orders where the orderDate is greater than or equal to "from"). Valid formats are "YYYY-MM-DD", an ISO String, or a UTC timestamp in milliseconds.'
+/>
+
+<RequestParamRow
+parameter="to"
+description='An exclusive datestring to query the orders by (all orders where the orderDate is less than "to"). Valid formats are "YYYY-MM-DD", an ISO String, or a UTC timestamp in milliseconds.'
+/>
+
+<RequestParamRow
+parameter="dateSort"
+description='Possible values: "asc" or "desc". Returns the orders sorted by ascending or descending order date, respectively.'
+/>
+
+<RequestParamRow
+parameter="nextPageToken"
+description='If provided, returns the next page of results.'
+/>
+
+<RequestParamRow
+parameter="pageSize"
+description='An integer to specify the size of the page of results from the query. The default is 100, and the max is 300.'
+/>
+
+</RequestParamTable>
+
+:::caution
+If using "nextPageToken" to retrieve the next page of results, be sure to use the exact same query parameters as the previous call to the endpoint, or else you will not receive the results as expected.
+:::
+
+## Response
+
+:::info
+Fields marked "(external)" are fields that are set by the client application when posting orders to the restoration dashboard system. These fields can be queried for equality when querying this endpoint.
+:::
+
+<ResponseParamTable>
+
+<ResponseParamRow
+parameter="nextPageToken"
+description="Only present if there are more results available for the same query. To retrieve the next page of results, execute the exact same query with this token added to your query parameters."
+/>
+
+<ResponseParamRow
+parameter="data"
+dataType="array: object"
+description="An array of order results."
+collapsible
+>
+
+<ResponseParamRow
+parameter="data[i]"
+dataType="object"
+description="An order in the array of order results."
+collapsible
+level={1}
+>
+<OrderParamRows level={2} />
+</ResponseParamRow>
+
+</ResponseParamRow>
+
+</ResponseParamTable>
