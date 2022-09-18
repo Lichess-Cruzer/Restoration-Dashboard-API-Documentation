@@ -1,0 +1,72 @@
+import DayParamRows from '@site/src/components/paramRowComponents/DayParamRows'
+
+# GET ./days
+
+Endpoint to retrieve summary data organized by day, with pagination.
+
+## Request
+
+<BaseUrlPath>days</BaseUrlPath>
+
+URL Query Parameters:
+
+<RequestParamTable>
+
+<RequestParamRow
+parameter="from"
+description='Inclusive day string to query from (greater than and including "from"). Must be in "YYYY-MM-DD" format.'
+/>
+
+<RequestParamRow
+parameter="to"
+description='Exclusive day string to query to (up to and excluding "to"). Must be in "YYYY-MM-DD" format.'
+/>
+
+<RequestParamRow
+parameter="pageSize"
+dataType="number"
+description='Requested page size. Defaults to 30, max is 100.'
+/>
+
+<RequestParamRow
+parameter="nextPageToken"
+description='Included in the response if the page size was reached, and more days are available. To retrieve the next page, execute an identical query with this parameter added to the query.'
+/>
+
+</RequestParamTable>
+
+## Response
+
+:::info
+Each day represents aggregated data from the start of the day (UTC) to the end of the day (UTC).
+:::
+
+<ResponseParamTable>
+
+<ResponseParamRow
+parameter='nextPageToken'
+description='Present if the page size was reached, and more days are still available. To retrieve the next page, make an identical request with this parameter added to the query.'
+/>
+
+<ResponseParamRow
+parameter='days'
+dataType="array: object"
+description='An array of objects, each object representing one of the days of data.'
+collapsible
+>
+
+<ResponseParamRow
+parameter="days[i]"
+dataType="object"
+description="A day item."
+collapsible
+level={1}
+>
+
+<DayParamRows level={2} />
+
+</ResponseParamRow>
+
+</ResponseParamRow>
+
+</ResponseParamTable>
