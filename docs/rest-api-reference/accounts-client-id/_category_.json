@@ -1,8 +1,8 @@
 {
-    "label": "/accounts/{CLIENT_ID}",
+    "label": "/accounts/CLIENT_ID",
     "position": 2,
     "link": {
         "type": "generated-index",
-        "description": "Documentation of the specific endpoints."
+        "description": "Documentation of the specific endpoints. You must pass your applications CLIENT_ID into the route for all sub-routes."
     }
 }

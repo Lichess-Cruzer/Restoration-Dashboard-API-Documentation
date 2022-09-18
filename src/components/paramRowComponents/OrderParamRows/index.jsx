@@ -64,14 +64,14 @@ const OrderParamRows = ({
             case true:
                 return [
                     "array: object",
-                    "Array of tree IDs, which are references to the trees matched to this order.",
+                    "Array of tree objects, representing the trees matched to this order.",
                     "object",
                     "A tree item."
                 ]
             default:
                 return [
                     "array: string",
-                    "Array of tree objects, representing the trees matched to this order.",
+                    "Array of tree IDs, which are references to the trees matched to this order.",
                     "string",
                     "A tree reference ID."
                 ]
