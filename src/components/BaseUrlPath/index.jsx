@@ -16,7 +16,7 @@ const BaseUrlPath = ({
             <code>
                 {`/${
                     includeClientId ?
-                    'accounts/CLIENT_ID/' :
+                    'accounts/:CLIENT_ID/' :
                     ''
                 }${props.children}`}
             </code>

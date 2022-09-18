@@ -1,12 +1,12 @@
 import OrderParamRows from "@site/src/components/paramRowComponents/OrderParamRows"
 
-# GET ./orders/ORDER_ID
+# GET ./orders/:ORDER_ID
 
 Endpoint to retrieve an order by Order ID.
 
 ## Request
 
-<BaseUrlPath>orders/ORDER_ID</BaseUrlPath>
+<BaseUrlPath>orders/:ORDER_ID</BaseUrlPath>
 
 URL Route Parameters:
 
