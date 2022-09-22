@@ -3,12 +3,13 @@ import React from "react";
 const RequestParamTable = ({
     json = false,
     formdata = false,
+    route = false,
     ...props
 }) => {
 
     return (<>
 
-        <h4>Request Parameters Format: {formdata ? 'Form Data' : json ? 'JSON' : 'URL Query Parameters'}</h4>
+        <h4>Request Parameters Format: {route ? 'Route Params' : formdata ? 'Form Data' : json ? 'JSON' : 'URL Query Parameters'}</h4>
 
         <table>
 

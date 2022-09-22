@@ -1,18 +1,12 @@
-import React from "react";
+import React, { useMemo } from "react";
 import ResponseParamRow from "../../ResponseParamRow";
+import SiteParamRows from "../SiteParamRows";
+import TreeTypeParamRows from "../TreeTypeParamRows";
 
 const TreeItems = [
     {
         parameter: '_id',
         description: "The reference ID for this tree.",
-    },
-    {
-        parameter: 'site',
-        description: 'The reference ID for the site that this tree is located at.',
-    },
-    {
-        parameter: 'treeType',
-        description: 'The reference ID for the tree type details of this tree.',
     },
     {
         parameter: 'status',
@@ -23,6 +17,7 @@ const TreeItems = [
 
 const TreeParamRows = ({
     level = 0,
+    populateRefs = false,
     ...props
 }) => {
 
@@ -37,6 +32,48 @@ const TreeParamRows = ({
                     level={level}
                 />
             })}
+
+            {populateRefs ? (<>
+
+                <ResponseParamRow
+                    parameter="site"
+                    description="The details for the restoration site where the tree is located."
+                    collapsible
+                    level={level}
+                >
+
+                    <SiteParamRows
+                        level={level + 1}
+                    />
+
+                </ResponseParamRow>
+
+                <ResponseParamRow
+                    parameter="treeType"
+                    description="The tree type details for this tree."
+                    collapsible
+                    level={level}
+                >
+
+                    <TreeTypeParamRows
+                        level={level + 1}
+                    />
+
+                </ResponseParamRow>
+
+            </>) : (<>
+
+                <ResponseParamRow
+                    parameter="site"
+                    description="The reference ID for the restoration site that this tree is located at."
+                />
+
+                <ResponseParamRow
+                    parameter="treeType"
+                    description="The reference ID for the tree type details of this tree."
+                />
+
+            </>)}
 
         </>
 

@@ -110,6 +110,7 @@ const OrderParamRows = ({
 
                         <TreeParamRows
                             level={level + 2}
+                            populateRefs={populateTrees}
                         />
 
                     </> : <></>}

@@ -1,0 +1,27 @@
+import TreeParamRows from "@site/src/components/paramRowComponents/TreeParamRows"
+
+# GET ./trees/:TREE_ID
+
+Endpoint to retrieve a tree by ID.
+
+## Request
+
+<BaseUrlPath>trees/:TREE_ID</BaseUrlPath>
+
+<RequestParamTable route>
+
+<RequestParamRow
+parameter="TREE_ID"
+required
+description="A string referring to the tree ID."
+/>
+
+</RequestParamTable>
+
+## Response
+
+<ResponseParamTable>
+
+<TreeParamRows />
+
+</ResponseParamTable>
