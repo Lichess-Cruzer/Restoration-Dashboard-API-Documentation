@@ -1,5 +1,5 @@
 {
-    "label": "/accounts/:CLIENT_ID",
+    "label": "Account Routes",
     "position": 2,
     "link": {
         "type": "generated-index",
