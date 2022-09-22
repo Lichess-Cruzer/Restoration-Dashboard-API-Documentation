@@ -1,0 +1,26 @@
+import SiteParamRows from "@site/src/components/paramRowComponents/SiteParamRows"
+
+# GET ./sites/:SITE_ID
+
+Endpoint to retrieve site details by the site ID.
+
+## Request
+
+<BaseUrlPath>sites/:SITE_ID</BaseUrlPath>
+
+<RequestParamTable route>
+
+<RequestParamRow
+parameter="SITE_ID"
+description="The site identifier."
+/>
+
+</RequestParamTable>
+
+## Response
+
+<ResponseParamTable>
+
+<SiteParamRows />
+
+</ResponseParamTable>
