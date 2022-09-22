@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useMemo } from "react";
 import ResponseParamRow from "../../ResponseParamRow";
 
 const DayItems = [
@@ -59,29 +59,51 @@ export const DayDataItems = [
     },
 ]
 
+export const AdditionalSummaryDataItems = [
+    {
+        parameter: 'lbsCarbonToBeSequestered',
+        dataType: 'number',
+        description: 'The total amount of carbon (in US Customary "pounds") that will be sequestered over the life of the trees matched to orders on this account.'
+    }
+]
+
 const DayParamRows = ({
     level = 0,
+    accountAggregate = false,
     ...props
 }) => {
+
+    const Items = useMemo(() => {
+        if (accountAggregate) {
+            return DayDataItems.concat(AdditionalSummaryDataItems)
+        }
+        return DayDataItems;
+    }, [accountAggregate])
 
     return (
 
         <>
 
-            <ResponseParamRow
+            {!accountAggregate && <ResponseParamRow
                 parameter="day"
                 description='The day of data, formatted as "YYYY-MM-DD".'
                 level={level}
+            />}
+
+            <ResponseParamRow
+                parameter="lastUpdatedAt"
+                dataType="datestring"
+                description="The timestamp of the last time this data was updated."
             />
 
             <ResponseParamRow
                 parameter="data"
-                description="The aggregated order/tree data for the day."
+                description="The aggregated order/tree data."
                 collapsible
                 level={level}
             >
 
-                {DayDataItems.map(dayDataItem => {
+                {Items.map(dayDataItem => {
                     return <ResponseParamRow
                         key={dayDataItem.parameter}
                         {...dayDataItem}
