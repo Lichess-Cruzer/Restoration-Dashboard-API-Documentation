@@ -1,0 +1,36 @@
+import SiteParamRows from "@site/src/components/paramRowComponents/SiteParamRows"
+
+# GET ./sites
+
+Endpoint to get a list of the restoration sites where trees are being planted for this account.
+
+## Request
+
+<BaseUrlPath>sites</BaseUrlPath>
+
+## Response
+
+<ResponseParamTable>
+
+<ResponseParamRow
+parameter="[]"
+dataType="array: object"
+description="Response is an array of sites."
+collapsible
+>
+
+<ResponseParamRow
+parameter="[i]"
+dataType="object"
+description="Individual restoration site details"
+collapsible
+level={1}
+>
+
+<SiteParamRows level={2} />
+
+</ResponseParamRow>
+
+</ResponseParamRow>
+
+</ResponseParamTable>
