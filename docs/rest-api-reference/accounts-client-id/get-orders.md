@@ -8,8 +8,6 @@ Endpoint to retrieve a list of orders (pagination enabled).
 
 <BaseUrlPath>orders</BaseUrlPath>
 
-URL Query Parameters:
-
 <RequestParamTable>
 
 <RequestParamRow

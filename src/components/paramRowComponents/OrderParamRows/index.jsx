@@ -13,29 +13,29 @@ const OrderItems = [
     },
     {
         parameter: "orderId",
-        description: "(external) The unique identifier (if provided) to identify the order with the client system.",
+        description: "(external) The unique identifier (if provided) to identify the order with the your system.",
     },
     {
         parameter: "groupId",
-        description: "(external) Set by client application.",
+        description: "(external) Set by your application when order is created.",
     },
     {
         parameter: "customerId",
-        description: "(external) Set by client application.",
+        description: "(external) Set by your application when order is created.",
     },
     {
         parameter: "invoiceId",
-        description: "(external) Set by client application.",
+        description: "(external) Set by your application when order is created.",
     },
     {
         parameter: "sku",
-        description: "(external) Set by client application.",
+        description: "(external) Set by your application when order is created.",
     },
-    {
-        parameter: "metadata",
-        dataType: "object",
-        description: "Object with keys and values set by the client application.",
-    },
+    // {
+    //     parameter: "metadata",
+    //     dataType: "object",
+    //     description: "Object with optional keys and values set by your application.",
+    // },
     {
         parameter: "treesRequired",
         dataType: "number",

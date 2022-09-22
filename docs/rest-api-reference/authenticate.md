@@ -14,7 +14,7 @@ You must use `application/x-www-form-urlencoded` content-type for this endpoint.
 
 <BaseUrlPath method="POST" includeClientId={false}>authenticate</BaseUrlPath>
 
-<RequestParamTable>
+<RequestParamTable formdata>
 <RequestParamRow
 parameter="client_id"
 dataType="string"
