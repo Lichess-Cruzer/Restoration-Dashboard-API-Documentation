@@ -1,0 +1,33 @@
+import TreeTypeParamRows from "@site/src/components/paramRowComponents/TreeTypeParamRows"
+
+# GET treeType
+
+Endpoint to retrieve tree type details by the tree type's ID.
+
+## Request
+
+<BaseUrlPath>sites/:SITE_ID/treeTypes/:TREE_TYPE_ID</BaseUrlPath>
+
+<RequestParamTable route>
+
+<RequestParamRow
+parameter="SITE_ID"
+required
+description="The ID of the site that the tree type is associated with."
+/>
+
+<RequestParamRow
+parameter="TREE_TYPE_ID"
+required
+description="The ID of the tree type."
+/>
+
+</RequestParamTable>
+
+## Response
+
+<ResponseParamTable>
+
+<TreeTypeParamRows />
+
+</ResponseParamTable>
