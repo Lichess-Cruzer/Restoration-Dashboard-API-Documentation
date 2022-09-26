@@ -14,6 +14,16 @@ const SiteItems = [
         parameter: 'description',
         description: 'A description of the restoration site.',
     },
+    {
+        parameter: 'workHoursCreated',
+        dataType: 'number',
+        description: 'The number of work hours created on this restoration site.',
+    },
+    {
+        parameter: 'workersEmployed',
+        dataType: 'number',
+        description: 'The number of workers employed on this restoration site.',
+    },
 ]
 
 const SiteMetadataItems = [

@@ -47,6 +47,14 @@ export const DayDataItems = [
         dataType: 'number',
         description: 'The number of trees matched to orders received on this day that have been planted.',
     },
+]
+
+export const AdditionalSummaryDataItems = [
+    {
+        parameter: 'lbsCarbonToBeSequestered',
+        dataType: 'number',
+        description: 'The total amount of carbon (in US Customary "pounds") that will be sequestered over the life of the trees matched to orders on this account.'
+    },
     {
         parameter: 'workHoursCreated',
         dataType: 'number',
@@ -57,14 +65,6 @@ export const DayDataItems = [
         dataType: 'number',
         description: 'The number of workers employed as a result of the orders received on this day..',
     },
-]
-
-export const AdditionalSummaryDataItems = [
-    {
-        parameter: 'lbsCarbonToBeSequestered',
-        dataType: 'number',
-        description: 'The total amount of carbon (in US Customary "pounds") that will be sequestered over the life of the trees matched to orders on this account.'
-    }
 ]
 
 const DayParamRows = ({
