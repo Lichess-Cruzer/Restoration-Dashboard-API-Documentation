@@ -8,7 +8,7 @@ Authentication to the REST API follows the [OAuth2.0 client credentials](https:/
 
 ## Obtaining Client Credentials
 
-To obtain your client credentials, log in to the restoration dashboard for either the [staging](https://restoration-dashboard-staging.herokuapp.com) or [production](google.com) environment, depending on which credentials you are trying to obtain.
+To obtain your client credentials, log in to the restoration dashboard for either the [staging](https://restoration-dashboard-staging.herokuapp.com) or production environment, depending on which credentials you are trying to obtain.
 
 In the top right corner of the screen, click the settings <i className="bi bi-gear"></i> icon, and click on "Client Credentials".
 

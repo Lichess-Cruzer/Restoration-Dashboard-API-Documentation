@@ -18,7 +18,7 @@ REST API Base URL's:
 
 ## REST Content-Types
 
-When POST'ing data to the REST API, use JSON (`application/json`) content-type for all endpoints. The [authenticate](./api-reference/authenticate.md) endpoint is the only exception to this rule, which uses the form data content-type(`application/x-www-form-urlencoded`) in accordance with the [OAuth2.0 standards](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/).
+When POST'ing data to the REST API, use JSON (`application/json`) content-type for all endpoints. The [authenticate](./rest-api-reference/authenticate.md) endpoint is the only exception to this rule, which uses the form data content-type(`application/x-www-form-urlencoded`) in accordance with the [OAuth2.0 standards](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/).
 
 ## Next Steps
 
