@@ -13,7 +13,7 @@ const config = {
   title: 'Reduce. Reuse. Grow.',
   tagline: 'HTTPS API Reference Documentation',
   url: 'https://docs.restorationdashboard.com',
-  baseUrl: '/',
+  baseUrl: '/Restoration-Dashboard-API-Documentation/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
